@@ -235,31 +235,30 @@ ul {
     left: 0;
 }
 
-.aside .nav {
-    margin-top: 50px;
+.btnn {
+    display: flex;
+    flex-direction: column;
 }
 
-.aside .nav li {
-    margin-bottom: 20px;
-    display: block;
-}
-
-.aside .nav li a {
+.asd {
     font-size: 16px;
     font-weight: 600;
     display: block;
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
     padding: 5px 15px;
+    margin-bottom: 20px;
 }
 
-.aside .nav li a.active {
+.asd.active {
     color: var(--skin-color);
 }
 
-.aside .nav li a i {
+a i {
     margin-right: 15px;
 }
+
+
 
 /*home*/
 .home {

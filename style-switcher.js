@@ -1,4 +1,8 @@
 const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');
+const alternateStyles = document.querySelectorAll(".alternate-style");
+const dayNight = document.querySelector(".day-night");
+const nav = document.getElementById("btnn");
+const section = document.querySelectorAll(".section");
 
 //появление левого меню с цветами
 styleSwitcherToggle.addEventListener("click", () => {
@@ -15,7 +19,6 @@ window.addEventListener("scroll", () => {
 
 
 //смена цвета темы
-const alternateStyles = document.querySelectorAll(".alternate-style");
 function setActiveStyle(color) {
     alternateStyles.forEach((style) => {
         if(color === style.getAttribute("title")) {
@@ -28,8 +31,6 @@ function setActiveStyle(color) {
 }
 
 //темный фон
-const dayNight = document.querySelector(".day-night");
-
 dayNight.addEventListener("click", () => {
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
@@ -45,4 +46,16 @@ window.addEventListener("load", () => {
     }
 })
 
-//смена цвета кнопки страницы
+
+//смена цвета кнопки активной страницы
+const changeClass = el => {
+    for(let i = 0; i < nav.children.length; i++) {
+        nav.children[i].classList.remove("active");
+    }
+    el.classList.add("active");
+}
+
+nav.addEventListener("click", e => {
+    const currTab = e.target.dataset.btn;
+    changeClass(e.target);
+})

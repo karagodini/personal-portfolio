@@ -3,10 +3,16 @@ const alternateStyles = document.querySelectorAll(".alternate-style");
 const dayNight = document.querySelector(".day-night");
 const nav = document.getElementById("btnn");
 const section = document.querySelectorAll(".section");
+const navToggler = document.querySelector(".nav-toggler");
 
 //появление левого меню с цветами
 styleSwitcherToggle.addEventListener("click", () => {
     document.querySelector(".style-switcher").classList.toggle("open")
+})
+
+//мобильное меню навигации
+navToggler.addEventListener("click", () => {
+    document.querySelector(".mob-nav").classList.toggle("open")
 })
 
 

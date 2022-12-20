@@ -197,7 +197,7 @@ ul {
     width: 45px;
     border: 1px solid var(--bg-black-50);
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     left: 300px;
     top: 20px;
     border-radius: 5px;
@@ -235,6 +235,23 @@ ul {
     position: absolute;
     top: 6px;
     left: 0;
+}
+
+.mob-nav {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 5px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    padding: 15px;
+    transform: translateX(-240px);
+}
+
+.mob-nav.open {
+    transform: translateX(0px);
 }
 
 .btnn {
